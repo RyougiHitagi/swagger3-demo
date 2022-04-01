@@ -6,18 +6,8 @@ servers:
   - url: 'https://explorestoplightdemo.stoplight.io/api/v3'
     description: ''
 paths:
-  '/user/getUser/{userId}/{address}':
-    parameters:
-      - schema:
-          type: number
-        name: userId
-        in: path
-        required: true
-      - schema:
-          type: string
-        name: address
-        in: path
-        required: true
+  /user/getUser:
+    parameters: []
     get:
       summary: ''
       operationId: get-users-userId
@@ -37,6 +27,15 @@ paths:
                     type: string
                   userName:
                     type: string
+      parameters:
+        - schema:
+            type: number
+          in: header
+          name: userId
+        - schema:
+            type: string
+          in: header
+          name: address
 components:
   schemas:
     User:
@@ -60,3 +59,10 @@ components:
           type: string
         userName:
           type: string
+      x-internal: false
+  requestBodies:
+    temp:
+      content:
+        application/json:
+          schema:
+            type: object
