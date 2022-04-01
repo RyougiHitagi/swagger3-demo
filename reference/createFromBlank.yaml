@@ -3,7 +3,8 @@ info:
   title: createFromBlank
   version: '1.0'
 servers:
-  - url: 'https://explorestoplightdemo.stoplight.io/docs/swagger3-demo/'
+  - url: 'https://localhost:81'
+    description: ''
 paths:
   '/user/getUser/{userId}/{address}':
     parameters:
@@ -23,6 +24,19 @@ paths:
       responses:
         '200':
           description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  address:
+                    type: string
+                  id:
+                    type: number
+                  phone:
+                    type: string
+                  userName:
+                    type: string
 components:
   schemas:
     User:
