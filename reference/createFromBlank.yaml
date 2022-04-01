@@ -38,11 +38,24 @@ paths:
           name: address
   /user/getUsrList:
     get:
-      summary: Your GET endpoint
+      summary: get user list
       tags: []
       responses:
         '200':
           description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  address:
+                    type: string
+                  id:
+                    type: number
+                  phone:
+                    type: string
+                  userName:
+                    type: string
       operationId: get-user-getUsrList
 components:
   schemas:
