@@ -3,7 +3,7 @@ info:
   title: createFromBlank
   version: '1.0'
 servers:
-  - url: 'http://localhost:81'
+  - url: 'https://explorestoplightdemo.stoplight.io/docs/swagger3-demo/'
 paths:
   '/user/getUser/{userId}/{address}':
     parameters:
