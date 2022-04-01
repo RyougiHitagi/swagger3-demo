@@ -1,0 +1,48 @@
+openapi: 3.1.0
+info:
+  title: createFromBlank
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  '/user/getUser/{userId}/{address}':
+    parameters:
+      - schema:
+          type: number
+        name: userId
+        in: path
+        required: true
+      - schema:
+          type: string
+        name: address
+        in: path
+        required: true
+    get:
+      summary: ''
+      operationId: get-users-userId
+      responses:
+        '200':
+          description: OK
+components:
+  schemas:
+    User:
+      title: User
+      type: object
+      description: ''
+      examples:
+        - id: 142
+          firstName: Alice
+          lastName: Smith
+          email: alice.smith@gmail.com
+          dateOfBirth: '1997-10-31'
+          emailVerified: true
+          signUpDate: '2019-08-24'
+      properties:
+        address:
+          type: string
+        id:
+          type: number
+        phone:
+          type: string
+        userName:
+          type: string
