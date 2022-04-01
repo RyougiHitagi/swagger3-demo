@@ -3,7 +3,7 @@ info:
   title: createFromBlank
   version: '1.0'
 servers:
-  - url: 'https://localhost:81'
+  - url: 'https://explorestoplightdemo.stoplight.io/api/v3'
     description: ''
 paths:
   '/user/getUser/{userId}/{address}':
