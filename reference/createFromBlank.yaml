@@ -3,7 +3,7 @@ info:
   title: createFromBlank
   version: '1.0'
 servers:
-  - url: 'https://explorestoplightdemo.stoplight.io/api/v3'
+  - url: api/v2
     description: ''
 paths:
   /user/getUser:
@@ -36,6 +36,14 @@ paths:
             type: string
           in: header
           name: address
+  /user/getUsrList:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+      operationId: get-user-getUsrList
 components:
   schemas:
     User:
