@@ -27,6 +27,13 @@ paths:
                     type: string
                   userName:
                     type: string
+              examples:
+                example-1:
+                  value:
+                    address: address-0
+                    id: 0
+                    phone: '12345678'
+                    userName: user1
       parameters:
         - schema:
             type: number
@@ -56,6 +63,15 @@ paths:
                     type: string
                   userName:
                     type: string
+              examples:
+                example-1:
+                  value:
+                    - address: address-0
+                      id: 0
+                      phone: '12345678'
+                      userName: user1
+        '404':
+          description: Not Found
       operationId: get-user-getUsrList
 components:
   schemas:
