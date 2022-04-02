@@ -64,13 +64,10 @@ components:
       type: object
       description: ''
       examples:
-        - id: 142
-          firstName: Alice
-          lastName: Smith
-          email: alice.smith@gmail.com
-          dateOfBirth: '1997-10-31'
-          emailVerified: true
-          signUpDate: '2019-08-24'
+        - address: address-0
+          id: 0
+          phone: '12345678'
+          userName: user1
       properties:
         address:
           type: string
@@ -81,9 +78,6 @@ components:
         userName:
           type: string
       x-internal: false
-  requestBodies:
-    temp:
-      content:
-        application/json:
-          schema:
-            type: object
+  requestBodies: {}
+  examples: {}
+  parameters: {}
